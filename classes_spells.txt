@@ -1,0 +1,17 @@
+Skill tree
+	Mage
+		Elementalist
+		Familiar
+		Enchanter
+	Rogue
+		Poison
+		trap
+		Dagger
+	Archer
+		Bow
+		crossbow
+		thrown
+	Knight
+		2-Hand
+		2-sword
+		sword+shield

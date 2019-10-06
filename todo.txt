@@ -1,5 +1,9 @@
 TODO List
 
 1. Create classes for map, adventure, etc
-2. Create DB
-3. Create map building interface
+2. Create NPCs
+3. create items
+4. Create music
+5. Create DataBase
+6. Create map building interface
+

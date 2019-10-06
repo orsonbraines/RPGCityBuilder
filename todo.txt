@@ -1,0 +1,5 @@
+TODO List
+
+1. Create classes for map, adventure, etc
+2. Create DB
+3. Create map building interface

@@ -38,4 +38,15 @@ public class Item {
     public String toString(){
         return description;
     }
+    
+    @Override
+    public boolean equals(Object obj){
+        if(!obj.getClass().equals(this.getClass())) return false;
+        return id == ((Item)obj).id;
+    }
+
+    @Override
+    public int hashCode() {
+        return id;
+    }
 }

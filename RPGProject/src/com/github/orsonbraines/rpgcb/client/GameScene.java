@@ -29,15 +29,15 @@ public class GameScene {
     public GameScene(Node root, AssetManager assetManager) {
         this.root = root;
         this.assetManager = assetManager;
-        ts = new ArrayList<>();
-        for(int i=0;i<5;i++){
-            Spatial s = makeTree(i);
-            s.setLocalTranslation(5,0,-10*i);
-            ts.add(new TerrainSpatial(new Terrain(),s));
-        }
-        for(TerrainSpatial s : ts){
-            root.attachChild(s.model);
-        }
+//        ts = new ArrayList<>();
+//        for(int i=0;i<5;i++){
+//            Spatial s = makeTree(i);
+//            s.setLocalTranslation(5,0,-10*i);
+//            ts.add(new TerrainSpatial(new Terrain(),s));
+//        }
+//        for(TerrainSpatial s : ts){
+//            root.attachChild(s.model);
+//        }
         loadTerrain();
     }
     

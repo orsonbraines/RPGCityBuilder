@@ -48,7 +48,7 @@ public class Main extends SimpleApplication {
 //        rootNode.attachChild(grain);
         
         Spatial ch = assetManager.loadModel("Models/character/RPGcharacter1pcs.j3o");
-        ch.setLocalTranslation(-5,0,-10);
+        ch.setLocalTranslation(-5,0,-20);
         rootNode.attachChild(ch);
         
         cam.setLocation(new Vector3f(0,1,0));
@@ -59,8 +59,6 @@ public class Main extends SimpleApplication {
        
                 
         System.out.println(rootNode.getChildren());
-        System.out.println(((Node)rootNode.getChild("node 0")).getChildren());
-        //System.out.println(assetManager.loadAsset("db/db.sqlite3"));
     }
 
     @Override

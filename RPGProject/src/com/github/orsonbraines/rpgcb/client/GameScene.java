@@ -1,17 +1,23 @@
 package com.github.orsonbraines.rpgcb.client;
 
 import com.github.orsonbraines.rpgcb.core.Terrain;
+import com.github.orsonbraines.rpgcb.db.ModelLoader;
+import com.github.orsonbraines.rpgcb.db.TerrainLoader;
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;
 import com.jme3.math.ColorRGBA;
-import com.jme3.math.Vector3f;
 import com.jme3.scene.Geometry;
 import com.jme3.scene.Node;
 import com.jme3.scene.Spatial;
 import com.jme3.scene.shape.Box;
 import com.jme3.scene.shape.Sphere;
+import java.io.File;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -33,6 +39,21 @@ public class GameScene {
         }
         for(TerrainSpatial s : ts){
             root.attachChild(s.model);
+        }
+        loadTerrain();
+    }
+    
+    private void loadTerrain(){
+        String url = "jdbc:sqlite:" + new File("").getAbsolutePath() + "/assets/db/db.sqlite3";
+        try(Connection con = DriverManager.getConnection(url);){
+            System.out.println("Connection to SQLite has been established.");
+            List<Spatial> terrains = TerrainLoader.loadAll(assetManager, con);
+            for(Spatial s : terrains){
+                root.attachChild(s);
+                System.out.println("s: " + s);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
         }
     }
     

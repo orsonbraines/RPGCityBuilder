@@ -40,12 +40,16 @@ public class Main extends SimpleApplication {
         sun.setDirection(new Vector3f(-0.1f, -0.7f, -1.0f));
         rootNode.addLight(sun);
         
-        Spatial grain = assetManager.loadModel("Models/base_grain2/base_grain2.j3o");
-        Material mat2 = new Material(assetManager, "Common/MatDefs/Misc/Unshaded.j3md");
-        mat2.setColor("Color", ColorRGBA.Yellow);
-        grain.setMaterial(mat2);
-        grain.setLocalTranslation(0,0,-10);
-        rootNode.attachChild(grain);
+//        Spatial grain = assetManager.loadModel("Models/base_grain2/base_grain2.j3o");
+//        Material mat2 = new Material(assetManager, "Common/MatDefs/Misc/Unshaded.j3md");
+//        mat2.setColor("Color", ColorRGBA.Yellow);
+//        grain.setMaterial(mat2);
+//        grain.setLocalTranslation(0,0,-10);
+//        rootNode.attachChild(grain);
+        
+        Spatial ch = assetManager.loadModel("Models/character/RPGcharacter1pcs.j3o");
+        ch.setLocalTranslation(-5,0,-10);
+        rootNode.attachChild(ch);
         
         cam.setLocation(new Vector3f(0,1,0));
 
@@ -56,6 +60,7 @@ public class Main extends SimpleApplication {
                 
         System.out.println(rootNode.getChildren());
         System.out.println(((Node)rootNode.getChild("node 0")).getChildren());
+        //System.out.println(assetManager.loadAsset("db/db.sqlite3"));
     }
 
     @Override

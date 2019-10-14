@@ -6,7 +6,6 @@ import com.jme3.math.ColorRGBA;
 import com.jme3.math.Vector3f;
 import com.jme3.renderer.RenderManager;
 import com.jme3.scene.Geometry;
-import com.jme3.scene.Spatial;
 import com.jme3.scene.shape.Box;
 import com.jme3.scene.shape.Sphere;
 
@@ -39,8 +38,6 @@ public class Main extends SimpleApplication {
         makeTree(new Vector3f(10,0,0),4,1,2);
         
         cam.setLocation(new Vector3f(0,1,0));
-        
-        Spatial box = assetManager.loadModel("Models/box.blend");
 
         rootNode.attachChild(geom);
         viewPort.setBackgroundColor(ColorRGBA.Blue);

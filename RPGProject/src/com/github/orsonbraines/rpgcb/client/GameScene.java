@@ -1,7 +1,6 @@
 package com.github.orsonbraines.rpgcb.client;
 
 import com.github.orsonbraines.rpgcb.core.Terrain;
-import com.github.orsonbraines.rpgcb.db.ModelLoader;
 import com.github.orsonbraines.rpgcb.db.TerrainLoader;
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;
@@ -17,7 +16,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  *

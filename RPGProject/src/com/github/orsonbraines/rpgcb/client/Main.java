@@ -1,12 +1,14 @@
 package com.github.orsonbraines.rpgcb.client;
 
 import com.jme3.app.SimpleApplication;
+import com.jme3.light.DirectionalLight;
 import com.jme3.material.Material;
 import com.jme3.math.ColorRGBA;
 import com.jme3.math.Vector3f;
 import com.jme3.renderer.RenderManager;
 import com.jme3.scene.Geometry;
 import com.jme3.scene.Node;
+import com.jme3.scene.Spatial;
 import com.jme3.scene.shape.Box;
 
 
@@ -31,17 +33,29 @@ public class Main extends SimpleApplication {
         mat.setColor("Color", ColorRGBA.Green);
         geom.setMaterial(mat);
         geom.setLocalTranslation(new Vector3f(-5000,0,-5000));
-
         
         GameScene scene = new GameScene(rootNode, assetManager);
+        
+        DirectionalLight sun = new DirectionalLight();
+        sun.setDirection(new Vector3f(-0.1f, -0.7f, -1.0f));
+        rootNode.addLight(sun);
+        
+        Spatial grain = assetManager.loadModel("Models/base_grain2/base_grain2.j3o");
+        Material mat2 = new Material(assetManager, "Common/MatDefs/Misc/Unshaded.j3md");
+        mat2.setColor("Color", ColorRGBA.Yellow);
+        grain.setMaterial(mat2);
+        grain.setLocalTranslation(0,0,-10);
+        rootNode.attachChild(grain);
         
         cam.setLocation(new Vector3f(0,1,0));
 
         rootNode.attachChild(geom);
+
+        viewPort.setBackgroundColor(ColorRGBA.Blue);
+       
+                
         System.out.println(rootNode.getChildren());
         System.out.println(((Node)rootNode.getChild("node 0")).getChildren());
-        viewPort.setBackgroundColor(ColorRGBA.Blue);
-
     }
 
     @Override

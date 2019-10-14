@@ -5,6 +5,7 @@ package com.github.orsonbraines.rpgcb.core;
  * @author Orson Baines
  */
 public class Character {
+    private int hp,mana,baseHP,baseMana;
 
     public Character(int hp, int mana, int baseHP, int baseMana) {
         this.hp = hp;
@@ -44,5 +45,4 @@ public class Character {
     public void setBaseMana(int baseMana) {
         this.baseMana = baseMana;
     }
-    private int hp,mana,baseHP,baseMana;
 }

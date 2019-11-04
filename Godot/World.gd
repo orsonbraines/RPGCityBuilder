@@ -20,10 +20,10 @@ func _process(delta):
 	var character = get_node("KinematicBody")
 	var cam = get_node("Camera")
 	if Input.is_key_pressed(KEY_RIGHT):
-		phi -= delta
+		phi += delta
 		
 	if Input.is_key_pressed(KEY_LEFT):
-		phi += delta
+		phi -= delta
 	if Input.is_key_pressed(KEY_DOWN):
 		theta += delta
 		if theta > maxTheta:

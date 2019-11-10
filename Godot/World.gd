@@ -5,7 +5,7 @@ extends Spatial
 # var b = "textvar"
 var theta = 1
 var phi = 0
-var r = 15
+var r = 10
 var maxTheta = 2
 var minTheta = 0.2
 

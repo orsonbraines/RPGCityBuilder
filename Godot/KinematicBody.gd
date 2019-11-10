@@ -11,7 +11,7 @@ func _ready():
 	
 func _physics_process(delta):
 	var motion = Vector3()
-	var scale_coef = delta * 3
+	var scale_coef = delta * 8
 	if Input.is_key_pressed(KEY_D):
 		motion += scale_coef * transform.basis.z
 	if Input.is_key_pressed(KEY_A):

@@ -6,14 +6,14 @@
 
 extents = Vector3( 1.18337, 0.743429, 1.28781 )
 
-[node name="MiningRock" type="Spatial" index="0"]
+[node name="MiningRock" type="Spatial"]
 
-[node name="Scene Root" type="Spatial" parent="." index="0" instance=ExtResource( 1 )]
+[node name="Scene Root" parent="." index="0" instance=ExtResource( 1 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.107265, -2.38776 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="StaticBody" type="StaticBody" parent="Scene Root" index="1"]
+[node name="MiningRock" type="StaticBody" parent="Scene Root" index="1"]
 
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -24,7 +24,7 @@ bounce = 0.0
 constant_linear_velocity = Vector3( 0, 0, 0 )
 constant_angular_velocity = Vector3( 0, 0, 0 )
 
-[node name="CollisionShape" type="CollisionShape" parent="Scene Root/StaticBody" index="0"]
+[node name="CollisionShape" type="CollisionShape" parent="Scene Root/MiningRock" index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.483402, 2.37345 )
 shape = SubResource( 1 )

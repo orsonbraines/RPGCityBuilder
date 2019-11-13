@@ -13,7 +13,7 @@
 
 extents = Vector3( 1.22985, 5.09192, 2.10833 )
 
-[node name="Spatial" type="Spatial" index="0"]
+[node name="Root" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
 
@@ -88,6 +88,7 @@ transform = Transform( 3.46483, 0, 0, 0, 3.46483, 0, 0, 0, 3.46483, 15.7837, 0, 
 [node name="Spatial6" parent="." index="8" instance=ExtResource( 5 )]
 
 transform = Transform( 3.46483, 0, 0, 0, 3.46483, 0, 0, 0, 3.46483, 15.7837, 0, 35.103 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Tree" parent="." index="9" instance=ExtResource( 6 )]
 
@@ -119,7 +120,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin" ]
 
-[node name="ItemList" type="ItemList" parent="UI" index="0"]
+[node name="Inventory" type="ItemList" parent="UI" index="0"]
 
 anchor_left = 1.0
 anchor_top = 1.0

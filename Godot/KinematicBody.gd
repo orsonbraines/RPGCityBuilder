@@ -50,10 +50,10 @@ func _physics_process(delta):
 		var inventory = get_parent().get_node("UI/Inventory")
 		print("harvesting ", harvesting);
 		if harvesting == "Tree":
-			inventory.add_item("Log")
+			inventory.add_to_inventory("Log")
 			print("harvested log") 
 		elif harvesting == "MiningRock":
-			inventory.add_item("Ore")
+			inventory.add_to_inventory("Ore")
 			print("harvested ore") 
 		state_count = 0;
 #func _process(delta):

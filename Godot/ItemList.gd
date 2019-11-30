@@ -1,15 +1,19 @@
 extends ItemList
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+var inventory = {}
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	pass
+	
+func add_to_inventory(item):
+	if inventory.has(item):
+		inventory[item] += 1
+	else:
+		inventory[item] = 1
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func _process(delta):
+	clear()
+	for item in inventory:
+		add_item(item + " * " + str(inventory[item]))

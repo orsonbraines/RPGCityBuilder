@@ -5,7 +5,7 @@ extends Spatial
 # var b = "textvar"
 var theta = 1
 var phi = 0
-var r = 15
+var r = 10
 var maxTheta = 2
 var minTheta = 0.2
 
@@ -21,17 +21,20 @@ func _process(delta):
 	var cam = get_node("Camera")
 	if Input.is_key_pressed(KEY_RIGHT):
 		phi += delta
-		
+		character.setState("move")
 	if Input.is_key_pressed(KEY_LEFT):
 		phi -= delta
+		character.setState("move")
 	if Input.is_key_pressed(KEY_DOWN):
 		theta += delta
 		if theta > maxTheta:
 			theta = maxTheta
+		character.setState("move")
 	if Input.is_key_pressed(KEY_UP):
 		theta -= delta
 		if theta < minTheta:
 			theta = minTheta
+		character.setState("move")
 	
 	character.rotation = Vector3(0,-phi + PI,0)
 	cam.translation = character.translation + Vector3(0,5,0) + r*Vector3(sin(theta)*cos(phi),cos(theta),sin(theta)*sin(phi))

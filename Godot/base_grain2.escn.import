@@ -11,8 +11,8 @@ dest_files=[ "res://.import/base_grain2.escn-2e67d079f3aaa99ef0a8aed13f13dbfa.sc
 
 [params]
 
-nodes/root_type="Spatial"
-nodes/root_name="Scene Root"
+nodes/root_type="MeshInstance"
+nodes/root_name="Grain"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0

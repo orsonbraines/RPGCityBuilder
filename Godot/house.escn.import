@@ -11,8 +11,8 @@ dest_files=[ "res://.import/house.escn-1998cdb8e1972558f7da3830e1cd2119.scn" ]
 
 [params]
 
-nodes/root_type="Spatial"
-nodes/root_name="Scene Root"
+nodes/root_type="MeshInstance"
+nodes/root_name="House"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0

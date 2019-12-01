@@ -40,9 +40,17 @@ func _physics_process(delta):
 		var from = translation
 		var to = translation + ray_length * transform.basis.x
 		var result = space_state.intersect_ray(from, to, [self])
-		if result:
-			setState("harvest")
-			harvesting = result.collider.get("name")
+		if result and result.collider.get("name") == "GridMap":
+			var s = result.collider.cell_size
+			var r = result.position
+			harvesting = false
+			match result.collider.get_cell_item(floor(r.x / s.x), floor(r.y / s.y), floor(r.z / s.z)):
+				0:
+					harvesting = "Tree"
+				2:
+					harvesting = "MiningRock"
+			if harvesting:
+				setState("harvest")
 	move_and_collide(motion)
 	
 	

@@ -11,8 +11,8 @@ dest_files=[ "res://.import/basetree1.escn-c5f176f598dfd611928fca93e15fd2de.scn"
 
 [params]
 
-nodes/root_type="Spatial"
-nodes/root_name="Scene Root"
+nodes/root_type="MeshInstance"
+nodes/root_name="MyTree"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0

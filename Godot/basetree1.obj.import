@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/basetree1.obj-ed0e69139eb63cf63d6ccb4feabbf8fc.mesh"
+
+[deps]
+
+files=[ "res://.import/basetree1.obj-ed0e69139eb63cf63d6ccb4feabbf8fc.mesh" ]
+
+source_file="res://basetree1.obj"
+dest_files=[ "res://.import/basetree1.obj-ed0e69139eb63cf63d6ccb4feabbf8fc.mesh", "res://.import/basetree1.obj-ed0e69139eb63cf63d6ccb4feabbf8fc.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

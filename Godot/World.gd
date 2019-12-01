@@ -8,7 +8,7 @@ var phi = 0
 var r = 10
 var maxTheta = 2
 var minTheta = 0.2
-var houseScene = preload("res://house.tscn")
+#var houseScene = preload("res://house.tscn")
 var build = false
 
 func _ready():
@@ -39,9 +39,10 @@ func _process(delta):
 		character.setState("move")
 	if Input.is_key_pressed(KEY_N):
 		if build == false:
-			var node = houseScene.instance()
-			node.translation = character.translation + character.transform.basis.x * 20
-			add_child(node)
+			pass
+			#var node = houseScene.instance()
+			#node.translation = character.translation + character.transform.basis.x * 20
+			#add_child(node)
 	else:
 		build = false	
 	

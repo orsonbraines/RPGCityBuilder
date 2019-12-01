@@ -47,7 +47,7 @@ func _physics_process(delta):
 			match result.collider.get_cell_item(floor(r.x / s.x), floor(r.y / s.y), floor(r.z / s.z)):
 				0:
 					harvesting = "Tree"
-				2:
+				1:
 					harvesting = "MiningRock"
 			if harvesting:
 				setState("harvest")

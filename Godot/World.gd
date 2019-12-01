@@ -8,7 +8,6 @@ var phi = 0
 var r = 10
 var maxTheta = 2
 var minTheta = 0.2
-#var houseScene = preload("res://house.tscn")
 var build = false
 var character
 var cam

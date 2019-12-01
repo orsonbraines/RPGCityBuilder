@@ -98,7 +98,7 @@ _sections_unfolded = [ "Anchor", "Columns", "Focus", "Grow Direction", "Hint", "
 [node name="GridMap" type="GridMap" parent="." index="3"]
 
 theme = ExtResource( 5 )
-cell_size = Vector3( 10, 10, 10 )
+cell_size = Vector3( 12, 12, 12 )
 cell_octant_size = 8
 cell_center_x = true
 cell_center_y = false
@@ -107,7 +107,7 @@ cell_scale = 1.0
 collision_layer = 1
 collision_mask = 1
 data = {
-"cells": PoolIntArray( 2, 0, 1610612736, 2, 1, 0, 65531, 1, 1610612737, 65532, 1, -2147483647, 2, 2, 0, 2, 3, 0, 65532, 3, 1610612737, 65535, 3, 1, 65534, 65533, 2, 65535, 65533, -1610612734, 65533, 65534, 1610612738, 65534, 65534, 2, 65535, 65534, 2, 2, 65535, 0 )
+"cells": PoolIntArray( 1, 0, 2, 65533, 0, 1, 65533, 1, 1, 65534, 1, 1, 1, 2, 2, 65533, 65535, 0, 65535, 65535, 0 )
 }
 _sections_unfolded = [ "Cell" ]
 __meta__ = {
